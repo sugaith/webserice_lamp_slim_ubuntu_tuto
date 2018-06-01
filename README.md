@@ -1,27 +1,38 @@
-CRIAR UM WEBSERVICE LIKE A PRO RAPIDÃO
+CRIAR UM WEBSERVICE LIKE A PRO RAPIDÃO COM SLIM FRAMEWORK E LAMP
 
-Estou fazendo este tutorial pois a documentação do Slim Framework deixa a desejar.. 
-pessal fica perdida batendo cabeça, ainda mais os colegas que nao sabe inglês. 
+Estou criando isto por..
+- que ja tive q passar por este processo mesmo.. para o desenvolvimento de um novo aplicativo em react-native
+- servir como guia de apresentação de um trabaho de Redes2 sobre REST que ocorrerá em breve
+- que quero movimentoar esse Git
+- que a documentação do Slim Framework deixa a desejar.. pessoal fica perdida batendo cabeça, ainda mais os colegas que nao sabem inglês. 
 
 Na documentacao do Slim eles falam pra voce instalar um esqueleto deles, 
 que é bem robusto e realmente voce nao precisa de tudo isso pra começar.
 Ao inves disso, neste turoria voce so vai precisar de um arquivo (index.php) deste repositorio, 
 localizado na pasta servida pelo apache: '/var/www/girorest/src/public'
 
-Sintam-se livre pra colaborar arrumando isso aqui.
 
 
+Sintam-se livre pra colaborar arrumando isso aqui: 
+- removendo meus comentarios desnecessarios.
+- deixando o passo a passo mais didático
+- formalizando (um pouco)
+- formatando este readme
+- agregando rotas/funcionalidades que mostre o que a tecnologia e capaz funcionamento do slim
+- coneitos..
+- diferenca do processo em diferentes versoes linux
+__________________________
 
 
 COM ESTE PASSO A PASSO VOCE VAI PODER TER UM AMBIENTE COM:
 - LINUX UBUNTU
-- MYSQL, PHP, APACHE2,
+- MYSQL, PHP, APACHE2, (vulgos LIMP)
 - SLIM FRAMEWORK (MICRO WEBSERVICE EM PHP TIPO REST)
 
 ... RODANDO LIKE A PRO RAPIDÃO
 
 - PRE REQUISITOS:
-    - UBUNTU SECO INSTALADO
+    - UBUNTU SECO INSTALADO (eu usei versao 14) 
 
 
 1)  Instalar Apache2
