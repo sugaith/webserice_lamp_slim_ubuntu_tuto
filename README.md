@@ -1,7 +1,7 @@
 # CRIE UM WEBSERVICE COM SLIM FRAMEWORK E LAMP LIKE A PRO RAPIDÃO 
 
 
-Estou criando isto por..
+###Estou criando isto por..
 - que ja tive q passar por este processo mesmo.. para o desenvolvimento de um novo aplicativo em react-native
 - servir como guia de apresentação de um trabaho de Redes2 sobre REST que ocorrerá em breve
 - que quero movimentoar esse Git
@@ -38,7 +38,7 @@ COM ESTE PASSO A PASSO VOCE VAI PODER TER UM AMBIENTE COM:
 
 1.  Instalar Apache2
 
-```javascript
+```php
 $ apt-get update
 $ apt-get install apache2
 ```
