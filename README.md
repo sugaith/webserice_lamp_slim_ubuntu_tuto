@@ -1,7 +1,15 @@
 CRIAR UM WEBSERVICE LIKE A PRO RAPIDÃO
 
-Estou fazendo este turorial pois a documentação do SlimFRamework deixa a desejar
-e a galera fica perdida batendo cabeça, ainda mais os colegas que nao sabe inglês.
+Estou fazendo este tutorial pois a documentação do Slim Framework deixa a desejar.. 
+pessal fica perdida batendo cabeça, ainda mais os colegas que nao sabe inglês. 
+
+Na documentacao do Slim eles falam pra voce instalar um esqueleto deles, 
+que é bem robusto e realmente voce nao precisa de tudo isso pra começar.
+Ao inves disso, neste turoria voce so vai precisar de um arquivo (index.php) deste repositorio, 
+localizado na pasta servida pelo apache: '/var/www/girorest/src/public'
+
+Sintam-se livre pra colaborar arrumando isso aqui.
+
 
 
 
