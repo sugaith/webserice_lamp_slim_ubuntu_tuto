@@ -108,8 +108,12 @@ Entre na pasta /var/www/src/girorest/ ('girorest' é o nome do meu projeto mas vc
 $ cd /var/www/girorest/
 
 6) Aqui instalaremos gerenciador de pacotes Composer para instalar o Slim (padrão do slim)
-Os comandos baixo vao baixar s instalr o composer usando o executavel do php.
-Digite comando por comando.
+Os comandos baixo vao baixar e instalar o composer usando o executavel do php.
+**antes, certifique-se que voce tem voce tem zip e unzip
+
+$ apt-get install zip unzip
+
+agora, Digite comando por comando.
 
 $ php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 $ php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
