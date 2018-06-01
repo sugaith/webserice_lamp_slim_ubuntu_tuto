@@ -1,20 +1,29 @@
 <?php
+//objetos de response e request
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
+//auto load do Slim.. obrigatorio
 require '../vendor/autoload.php';
 
+//esta flag é para desenvolvimento, em produção voce vmai querer deixar todas em false, para que
+// nao fique aparecendo erros e avisos aos usuarios finals e para que o tamanho do header nao seja divulgado
 $config['displayErrorDetails'] = true;
 $config['addContentLengthHeader'] = false;
 
+//dados de conexao do banco de dados
 $config['db']['host']   = 'localhost';
 $config['db']['user']   = 'thiago';
 $config['db']['pass']   = 'thiago123.';
 $config['db']['dbname'] = 'girodb';
 
-#$app = new \Slim\App;
+
+#$app = new \Slim\App; //use esta linha caso nao precise fas configuracoes
 $app = new \Slim\App(['settings' => $config]);
 
+
+//Container para instanciamento das classes. Todas as classes adicionadas e instanciadas no container
+// sao acessiveis atravez de this->
 $container = $app->getContainer();
 $container['db'] = function ($c) {
     $db = $c['settings']['db'];
@@ -25,6 +34,10 @@ $container['db'] = function ($c) {
     return $pdo;
 };
 
+//Abaixo são as rotas.. para mais info veja documentacao do SLIM..
+//É aqui que vem a vantagem do SLIM!!
+
+//GET - OLÁ MUNDO
 $app->get('/{name}/', function (Request $request, Response $response, array $args) {
     $name = $args['name'];
     $response->getBody()->write("OLÁ, $name");
@@ -32,7 +45,7 @@ $app->get('/{name}/', function (Request $request, Response $response, array $arg
     return $response;
 });
 
-//GET
+//GET retorna usuaros
 $app->get('/tickets', function (Request $request, Response $response) {
 //    $this->logger->addInfo("Ticket list");
     $sth = $this->db->prepare("SELECT * FROM usuario");
@@ -43,6 +56,8 @@ $app->get('/tickets', function (Request $request, Response $response) {
 
     return $response->withJson($todos);
 });
+
+//Os abaixo nao sao funcionais
 
 //POST
 $app->post('/ticket/new', function (Request $request, Response $response) {
