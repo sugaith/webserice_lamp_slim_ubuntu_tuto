@@ -1,21 +1,11 @@
 # CRIE UM WEBSERVICE COM SLIM FRAMEWORK E LAMP LIKE A PRO RAPIDÃO 
 
-
-###Estou criando isto por..
-- que ja tive q passar por este processo mesmo.. para o desenvolvimento de um novo aplicativo em react-native
-- servir como guia de apresentação de um trabaho de Redes2 sobre REST que ocorrerá em breve
-- que quero movimentoar esse Git
-- que a documentação do Slim Framework deixa a desejar.. pessoal fica perdida batendo cabeça, ainda mais os colegas que nao sabem inglês. 
-
 Na documentacao do Slim eles falam pra voce instalar um esqueleto deles, 
 que é bem robusto e realmente voce nao precisa de tudo isso pra começar.
 Ao inves disso, neste turoria voce so vai precisar de um arquivo (index.php) deste repositorio, 
 localizado na pasta servida pelo apache: '/var/www/girorest/src/public'
 
-
-
 Ainda estou arrumando este tuto. Sintam-se livre pra colaborar arrumando isso aqui: 
-- removendo meus comentarios desnecessarios.
 - deixando o passo a passo mais didático
 - formalizando (um pouco)
 - formatando este readme 
