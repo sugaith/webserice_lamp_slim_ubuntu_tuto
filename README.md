@@ -169,6 +169,13 @@ crie um arquivo .htaccess na pasta '/var/www/girorest/src/public/'
 e cole o seguinte codigo:
 
 ```php
+#para CORS
+Header always set Access-Control-Allow-Origin "http://meuDominio"
+Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, DELETE, PUT"
+Header always set Access-Control-Max-Age "1000"
+Header always set Access-Control-Allow-Headers "*"
+
+
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -195,6 +202,27 @@ $config['db']['dbname'] = 'girodb';
  ou  http://seudominio.se/mundo/ se estiver remoto.
 
  *A explicação do funcionemtno do código esta como comentário do próprio código.
+
+
+ ** para cords: no response
+  return $response
+        ->withHeader('Access-Control-Allow-Origin', 'http://107.21.26.192')
+        ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
+        ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS')
+        ->withJson( utf8ize( $result ) );
+
+
+- DOCS: https://benjaminhorn.io/code/setting-cors-cross-origin-resource-sharing-on-apache-with-correct-response-headers-allowing-everything-through/
+# Always set these headers.
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, DELETE, PUT"
+Header always set Access-Control-Max-Age "1000"
+Header always set Access-Control-Allow-Headers "x-requested-with, Content-Type, origin, authorization, accept, client-security-token"
+ 
+# Added a rewrite to respond with a 200 SUCCESS on every OPTIONS request.
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule ^(.*)$ $1 [R=200,L]
 
 
 
